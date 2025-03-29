@@ -21,6 +21,17 @@ public class TurfWar extends PApplet {
         int downKey;
         int rightKey;
 
+        	public Player(int x, int y, int speed, int playerSize, int playerColor, int upKey, int leftKey, int downKey, int rightKey) {
+        		this.x = x;
+        		this.y = y;
+        		this.speed = speed;
+        		this.playerSize = playerSize;
+        		this.playerColor = playerColor;
+        		this.upKey = upKey;
+        		this.leftKey = leftKey;
+        		this.downKey = downKey;
+        		this.rightKey = rightKey;
+        	}
         /*
          * The member variables below do not need to be initialized in the
          * constructor.
@@ -36,7 +47,8 @@ public class TurfWar extends PApplet {
              * 2. Draw a rectangle to represent the the Player using its color,
              * coordinates and size.
              */
-            
+        	fill(playerColor);
+            rect(x,y,playerSize,playerSize);
         }
 
         void update() {
